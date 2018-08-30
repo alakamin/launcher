@@ -1,6 +1,6 @@
 2018-08-25 Screenshots
 
-![Screenshots](./examples/Untitled.png)
-![Screenshots](./examples/Untitled2.png)
-![Screenshots](./examples/Untitled3.png)
-![Screenshots](./examples/Untitled4.png)
+![Screenshots](./media/1.png)
+![Screenshots](./media/2.png)
+![Screenshots](./media/3.png)
+![Screenshots](./media/4.png)
