@@ -1,10 +1,10 @@
 object Form1: TForm1
-  Left = 400
-  Height = 152
-  Top = 606
+  Left = 749
+  Height = 166
+  Top = 444
   Width = 622
   Caption = 'Alakamin Treasure Mountain - Launcher'
-  ClientHeight = 152
+  ClientHeight = 166
   ClientWidth = 622
   OnCreate = FormCreate
   LCLVersion = '1.8.4.0'
@@ -21,64 +21,56 @@ object Form1: TForm1
       Caption = 'CONFIG'
       ClientHeight = 623
       ClientWidth = 890
-      object initbutton: TButton
-        Left = 4
-        Height = 25
-        Top = 24
-        Width = 117
-        Caption = 'INIT ALAKAMIN'
-        OnClick = initbuttonClick
-        TabOrder = 0
-      end
+      OnContextPopup = TabSheet1ContextPopup
       object Button1: TButton
-        Left = 4
-        Height = 27
-        Top = 55
+        Left = 3
+        Height = 23
+        Top = 8
         Width = 115
-        Caption = 'SYNC / RUN NODE'
+        Caption = 'FAST / RUN NODE'
         OnClick = Button1Click
-        TabOrder = 1
+        TabOrder = 0
       end
       object Button2: TButton
         Left = 3
-        Height = 25
-        Top = 88
+        Height = 23
+        Top = 40
         Width = 115
         Caption = 'CREATE WALLET'
         OnClick = Button2Click
-        TabOrder = 2
+        TabOrder = 1
       end
       object Button3: TButton
-        Left = 120
-        Height = 27
-        Top = 56
+        Left = 224
+        Height = 23
+        Top = 8
         Width = 113
         Caption = '+OPEN CONSOLE'
         OnClick = Button3Click
-        TabOrder = 3
+        TabOrder = 2
       end
       object Button4: TButton
-        Left = 504
+        Left = 559
         Height = 23
-        Top = 88
-        Width = 97
+        Top = 8
+        Width = 41
         Caption = 'QUIT'
         OnClick = Button4Click
-        TabOrder = 4
+        TabOrder = 3
       end
       object Button11: TButton
-        Left = 120
-        Height = 25
-        Top = 88
+        Left = 113
+        Height = 23
+        Top = 40
         Width = 112
         Caption = 'WALLET FOLDER'
         OnClick = Button7Click
-        TabOrder = 5
+        TabOrder = 4
       end
       object Image1: TImage
-        Left = 504
+        Left = 512
         Height = 88
-        Top = 0
+        Top = 35
         Width = 88
         OnClick = Image1Click
         Picture.Data = {
@@ -260,10 +252,63 @@ object Form1: TForm1
           1589FE3D472F57A7DC723451457D31C4145145007FFFD9
         }
       end
-      object Image2: TImage
+      object Button13: TButton
+        Left = 336
+        Height = 23
+        Top = 8
+        Width = 113
+        Caption = '?CONSOLE HELP'
+        OnClick = Button13Click
+        TabOrder = 5
+      end
+      object Edit9: TEdit
+        Left = 80
+        Height = 23
+        Top = 73
+        Width = 272
+        TabOrder = 6
+        Text = '0xecb5d50b27d7e6441cf608217575da972aa24537'
+      end
+      object Label4: TLabel
+        Left = 3
+        Height = 19
+        Top = 73
+        Width = 52
+        Caption = 'WALLET'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Calibri'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label6: TLabel
+        Left = 3
+        Height = 19
+        Top = 104
+        Width = 74
+        Caption = 'PASSWORD'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Calibri'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object Edit10: TEdit
+        Left = 80
+        Height = 23
+        Top = 104
+        Width = 272
+        TabOrder = 7
+        Text = 'notapassword'
+      end
+      object Image5: TImage
         Left = 416
         Height = 88
-        Top = 0
+        Top = 35
         Width = 88
         OnClick = Image1Click
         Picture.Data = {
@@ -562,6 +607,24 @@ object Form1: TForm1
           F38FA7F7A9FFB701A1FF0365A56917B6EEB2920000000049454E44AE426082
         }
       end
+      object Button14: TButton
+        Left = 512
+        Height = 23
+        Top = 8
+        Width = 49
+        Caption = 'INIT FIX'
+        OnClick = initbuttonClick
+        TabOrder = 8
+      end
+      object Button15: TButton
+        Left = 113
+        Height = 23
+        Top = 8
+        Width = 115
+        Caption = 'FULL / RUN NODE'
+        OnClick = Button15Click
+        TabOrder = 9
+      end
     end
     object TabSheet2: TTabSheet
       Caption = 'CPU MINING'
@@ -606,8 +669,8 @@ object Form1: TForm1
         Height = 21
         Top = 69
         Width = 140
-        Caption = 'ADDRESS HELP'
-        OnClick = Button12Click
+        Caption = '?ADDRESS HELP'
+        OnClick = Button10Click
         TabOrder = 3
       end
       object Label8: TLabel
@@ -629,7 +692,7 @@ object Form1: TForm1
       object Image4: TImage
         Left = 504
         Height = 88
-        Top = 0
+        Top = 8
         Width = 88
         OnClick = Image1Click
         Picture.Data = {
@@ -856,8 +919,8 @@ object Form1: TForm1
         Height = 21
         Top = 69
         Width = 140
-        Caption = 'ADDRESS HELP'
-        OnClick = Button12Click
+        Caption = '?ADDRESS HELP'
+        OnClick = Button10Click
         TabOrder = 3
       end
       object GroupBox1: TGroupBox
@@ -884,7 +947,9 @@ object Form1: TForm1
           Top = 2
           Width = 119
           Caption = '(U) CUDA  (Nvidia)'
+          Checked = True
           TabOrder = 1
+          TabStop = True
         end
         object RadioButton2: TRadioButton
           Left = 256
@@ -924,7 +989,7 @@ object Form1: TForm1
       end
     end
     object TabSheet4: TTabSheet
-      Caption = 'About'
+      Caption = 'Sources'
       ClientHeight = 623
       ClientWidth = 890
       object Label1: TLabel
@@ -964,8 +1029,8 @@ object Form1: TForm1
         Left = 2
         Height = 15
         Top = 62
-        Width = 30
-        Caption = 'audio'
+        Width = 138
+        Caption = 'all audio comes from here'
         ParentColor = False
       end
       object Edit3: TEdit
@@ -973,6 +1038,7 @@ object Form1: TForm1
         Height = 23
         Top = 77
         Width = 209
+        OnChange = Edit3Change
         TabOrder = 2
         Text = 'http://freemusicarchive.org/'
       end
@@ -991,7 +1057,7 @@ object Form1: TForm1
         Width = 214
         OnChange = Edit4Change
         TabOrder = 3
-        Text = 'https://alakamin.github.com'
+        Text = 'https://github.com/alakamin'
       end
       object Image3: TImage
         Left = 488
@@ -1294,6 +1360,22 @@ object Form1: TForm1
           B7DB0481A749010E4EC01916840197D194D6DDD7CB4BE7FA57A384A7C73FC7C5
           F38FA7F7A9FFB701A1FF0365A56917B6EEB2920000000049454E44AE426082
         }
+      end
+    end
+    object TabSheet5: TTabSheet
+      Caption = 'Attribution'
+      ClientHeight = 623
+      ClientWidth = 890
+      object memoo: TMemo
+        Left = 4
+        Height = 126
+        Top = 4
+        Width = 595
+        Lines.Strings = (
+          'memoo'
+        )
+        ScrollBars = ssVertical
+        TabOrder = 0
       end
     end
   end
